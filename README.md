@@ -1,6 +1,5 @@
 # AI-Powered Information Retrieval (IR) System
 
-![Information Retrieval Banner](https://via.placeholder.com/1200x400?text=AI-Powered+Information+Retrieval+System )
 
 ## 🌟 Project Overview
 
