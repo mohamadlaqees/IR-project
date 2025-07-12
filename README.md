@@ -192,35 +192,6 @@ rag_service.py: Implements the RAG pipeline for answer generation.
 •
 pipeline_search_service.py: Provides advanced search pipelines combining multiple methods.
 
-📊 Evaluation Results
-
-The performance of different search methods was evaluated on the Antique and Webis-Touche2020 datasets using standard information retrieval evaluation metrics. The following results show the average performance at K=10.
-
-Datasets Used
-
-•
-Antique: Contains 403,457 documents.
-
-•
-Webis-Touche2020: Contains 382,545 documents.
-
-Performance on Antique Dataset
-
-Search MethodP@10Recall@10nDCG@10MAP@10MRR@10Hybrid0.41550.13690.36580.10880.7506Embedding (Brute Force)0.36950.12100.34120.09530.7145TF-IDF0.28950.09960.20570.07530.6114Embedding (FAISS)0.22900.07430.26650.06870.8261RAG (Retrieval)0.22900.07430.26650.06870.8261
-
-Analysis: The Hybrid search method shows the best overall performance, while embedding methods (FAISS and RAG) excel at quickly finding the first relevant document (MRR@10).
-
-Performance on Webis-Touche2020 Dataset
-
-Search MethodP@10Recall@10nDCG@10MAP@10MRR@10TF-IDF0.24290.05120.12720.02680.4722Embedding (FAISS)0.22440.04650.17710.02980.5311RAG (Retrieval)0.22440.04650.17710.02980.5311Hybrid0.16120.03360.08920.01770.3694Embedding (Brute Force)0.14080.02960.06990.01440.3127
-
-Analysis: Embedding methods (FAISS and RAG) outperform in nDCG, MAP, and MRR metrics on this dataset, indicating their better contextual understanding for argumentative queries.
-
-Execution Times (Antique Dataset - Example)
-
-Search MethodTotal Execution Time (seconds)TF-IDF17.77Embedding (Brute Force)4.49Embedding (FAISS)0.08Hybrid20.95RAG (with FAISS)4.74FAISS with Basics (Pipeline)2.70RAG with Basics (Pipeline)4.63
-
-Analysis: FAISS is significantly faster after initial loading, while methods involving large language models (RAG) or large data loading (TF-IDF) show longer initial response times.
 
 💡 Advanced Features
 
