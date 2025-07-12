@@ -134,7 +134,7 @@ The project consists of the following main components:
 
 Plain Text
 
-
+```bash
 . # Repository root
 ├── project/
 │   ├── app/ # Backend code
@@ -158,6 +158,7 @@ Plain Text
     │   ├── ChatInterface.jsx
     │   └── ... (other React components)
     └── package.json
+```
 
 
 🛠️ Core Services
