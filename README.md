@@ -1,97 +1,60 @@
-AI-Powered Information Retrieval (IR) System
+# AI-Powered Information Retrieval (IR) System
 
+![Information Retrieval Banner](https://via.placeholder.com/1200x400?text=AI-Powered+Information+Retrieval+System )
 
-
-
-
-
-
-🌟 Project Overview
+## 🌟 Project Overview
 
 This project presents an advanced Information Retrieval (IR) system designed to deliver accurate and relevant search results across large datasets. The system combines traditional and modern search methods, including TF-IDF, Embeddings-based search, FAISS, and Hybrid Search, in addition to integrating Retrieval-Augmented Generation (RAG) techniques to provide comprehensive and direct answers. The system is built with a modular architecture based on the Service-Oriented Architecture (SOA) principle to ensure flexibility, scalability, and ease of maintenance.
 
-✨ Key Features
+## ✨ Key Features
 
-•
-Multiple Search Methods: Supports TF-IDF, Semantic Search (Brute Force and FAISS), and Hybrid Search.
+*   **Multiple Search Methods**: Supports TF-IDF, Semantic Search (Brute Force and FAISS), and Hybrid Search.
+*   **Retrieval-Augmented Generation (RAG)**: Generates natural language answers based on retrieved document context.
+*   **Advanced Pipeline Search**: Combines multiple search methods to improve accuracy and efficiency.
+*   **Modular Architecture**: Service-oriented design for easy development and maintenance.
+*   **Flexible API**: Allows for easy interaction with the system.
+*   **Interactive User Interface (Frontend)**: For a seamless search and chat experience.
+*   **Dynamic RAG Instruction Control**: Ability to customize the behavior of the Large Language Model from the frontend.
 
-•
-Retrieval-Augmented Generation (RAG): Generates natural language answers based on retrieved document context.
-
-•
-Advanced Pipeline Search: Combines multiple search methods to improve accuracy and efficiency.
-
-•
-Modular Architecture: Service-oriented design for easy development and maintenance.
-
-•
-Flexible API: Allows for easy interaction with the system.
-
-•
-Interactive User Interface (Frontend): For a seamless search and chat experience.
-
-•
-Dynamic RAG Instruction Control: Ability to customize the behavior of the Large Language Model from the frontend.
-
-🚀 Quick Start
+## 🚀 Quick Start
 
 To set up and run the project locally, follow these steps:
 
-Prerequisites
+### Prerequisites
 
 Ensure you have the following installed on your system:
 
-•
-Python 3.9+ (recommended)
+*   Python 3.9+ (recommended)
+*   pip (Python package manager)
+*   Node.js and npm (to run the frontend)
+*   Git (to clone the repository)
 
-•
-pip (Python package manager)
+### 1. Clone the Repository
 
-•
-Node.js and npm (to run the frontend)
-
-•
-Git (to clone the repository)
-
-1. Clone the Repository
-
-Bash
-
-
+```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-
-
-2. Backend Setup
-
-Bash
-
-
-cd project/app
-pip install -r requirements.txt
-
+```
 
 Note: You might need to download NLTK resources for the first time:
 
 Python
 
-
+```bash
 import nltk
 nltk.download(\'punkt\')
 nltk.download(\'stopwords\')
 nltk.download(\'wordnet\')
 nltk.download(\'omw-1.4\')
-
+```
 
 3. Database Setup and Data Loading
 
 The project expects an SQLite database named IR_project.db in the project/app folder. You can load the antique and webis datasets using data_loader_utils.py.
 
-Bash
-
-
+```bash
 python data_loader_utils.py
-
+```
 
 This will create the necessary tables and load the data. Ensure you have the raw data files in the correct paths or modify data_loader_utils.py to suit your paths.
 
@@ -99,32 +62,26 @@ This will create the necessary tables and load the data. Ensure you have the raw
 
 To improve semantic search performance, you can build FAISS indexes:
 
-Bash
-
-
+```bash
 python faiss_service.py build_index antique
 python faiss_service.py build_index webis
-
+```
 
 5. Run the Backend Server
 
-Bash
-
-
+```bash
 python main.py
-
+```
 
 The server will run on http://127.0.0.1:8000 (or another port if specified).
 
 6. Frontend Setup and Run
 
-Bash
-
-
+```bash
 cd ../../frontend
 npm install
 npm start
-
+```
 
 The frontend will typically run on http://localhost:3000.
 
@@ -214,7 +171,4 @@ rag_with_basics: Uses the basic search pipeline to identify the best contextual 
 
 Contributions to this project are welcome! If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
 
-📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
 
