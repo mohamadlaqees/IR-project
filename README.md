@@ -149,7 +149,7 @@ Plain Text
 │   │   ├── rag_service.py
 │   │   ├── text_processing_service.py
 │   │   ├── tfidf_search_service.py
-│   │   └── IR_project.db (Database - will be created)
+│   │   └── IR_project.db (Database - will be created )
 │   └── requirements.txt
 └── frontend/
     ├── public/
